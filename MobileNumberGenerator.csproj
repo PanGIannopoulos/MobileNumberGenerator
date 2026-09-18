@@ -17,8 +17,8 @@
     <PackageReadmeFile>README.md</PackageReadmeFile>
     <RepositoryType>git</RepositoryType>
     <!-- TODO: replace with your own repo URL before publishing -->
-    <RepositoryUrl>https://github.com/YOUR-GITHUB-USERNAME/MobileNumberGenerator</RepositoryUrl>
-    <PackageProjectUrl>https://github.com/YOUR-GITHUB-USERNAME/MobileNumberGenerator</PackageProjectUrl>
+    <RepositoryUrl>https://github.com/PanGIannopoulos/MobileNumberGenerator</RepositoryUrl>
+    <PackageProjectUrl>https://github.com/PanGIannopoulos/MobileNumberGenerator</PackageProjectUrl>
     <Copyright>Copyright (c) 2026 Panagis</Copyright>
     <PackageOutputPath>./nupkg</PackageOutputPath>
   </PropertyGroup>
