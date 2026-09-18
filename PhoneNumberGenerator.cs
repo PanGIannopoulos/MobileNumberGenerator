@@ -84,7 +84,9 @@ namespace Panagis.MobileNumberGenerator
         private static PhoneNumber? TryGenerateFromPattern(string regionCode, int maxAttempts)
         {
             PhoneMetadata metadata = PhoneUtil.GetMetadataForRegion(regionCode);
-            string? pattern = metadata?.Mobile?.NationalNumberPattern;
+            string? pattern = regionCode == "GR"
+			? @"69\d{8}"
+			: metadata?.Mobile?.NationalNumberPattern;
 
             if (string.IsNullOrEmpty(pattern))
                 return null;
@@ -100,9 +102,11 @@ namespace Panagis.MobileNumberGenerator
                     try
                     {
                         PhoneNumber parsed = PhoneUtil.Parse(candidate, regionCode);
+                        var type = PhoneUtil.GetNumberType(parsed);
 
                         if (PhoneUtil.IsValidNumber(parsed) &&
-                            PhoneUtil.GetNumberType(parsed) == PhoneNumberType.MOBILE)
+                            (type == PhoneNumberType.MOBILE ||
+							 type == PhoneNumberType.FIXED_LINE_OR_MOBILE))
                         {
                             return parsed;
                         }

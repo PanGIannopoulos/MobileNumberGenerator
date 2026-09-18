@@ -9,7 +9,7 @@
 
   <PropertyGroup>
     <PackageId>Panagis.MobileNumberGenerator</PackageId>
-    <Version>1.0.0</Version>
+    <Version>1.0.1</Version>
     <Authors>Panagis</Authors>
     <Description>Generates random phone numbers that pass Google libphonenumber's MOBILE validation for a given country. Samples directly from that country's mobile numbering pattern (via Fare/Xeger) instead of returning the same fixed example number every time, and falls back to libphonenumber's own example number if no pattern-based candidate validates.</Description>
     <PackageTags>phone;phone-number;libphonenumber;mobile;random;test-data;faker;generator;fixtures</PackageTags>
