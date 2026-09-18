@@ -1,0 +1,16 @@
+# .NET build results
+bin/
+obj/
+nupkg/
+
+# Visual Studio
+.vs/
+*.user
+*.suo
+
+# Rider
+.idea/
+
+# OS files
+.DS_Store
+Thumbs.db
